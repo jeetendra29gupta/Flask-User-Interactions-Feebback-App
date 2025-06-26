@@ -19,9 +19,9 @@ Flask-User-Interactions-Feebback-App/
 │   ├── feedback.html      # Feedback form template
 │   └── 404.html           # Custom 404 error page template
 │
-├── .venv/                      # (Optional) Python virtual environment folder
-├── requirements.txt            # Python package dependencies
-└── README.md                   # This file
+├── .venv/                 # (Optional) Python virtual environment folder
+├── requirements.txt       # Python package dependencies
+└── README.md              # This file
 ```
 
 ---
