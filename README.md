@@ -44,7 +44,7 @@ Make sure you have the following installed:
 If you received it as a ZIP file, just extract it. Otherwise, run:
 
 ```bash
-git clone https://github.com/your-username/Flask-User-Interactions-Feebback-App.git
+git clone https://github.com/jeetendra29gupta/Flask-User-Interactions-Feebback-App.git
 cd Flask-User-Interactions-Feebback-App
 ```
 
