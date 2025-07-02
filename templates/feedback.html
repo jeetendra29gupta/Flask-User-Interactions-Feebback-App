@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Submit Feedback - FeedbackApp{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4 text-center">Submit Your Feedback</h2>
+
+        <form method="POST" novalidate>
+            {{ form.hidden_tag() }}
+
+            <div class="mb-3">
+                {{ form.feedback.label(class="form-label") }}
+                {{ form.feedback(class="form-control", placeholder="Write your feedback...", rows="5") }}
+                {% for error in form.feedback.errors %}
+                <div class="text-danger small">{{ error }}</div>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">{{ form.submit.label.text }}</button>
+
+        </form>
+    </div>
+
+    <hr class="my-5">
+    {% if feedbacks %}
+    <h3>Recent Feedback</h3>
+    <ul class="list-group">
+        {% for f in feedbacks %}
+        <li class="list-group-item">
+            <strong>{{ f.user.username if f.user else "Anonymous" }}</strong> ({{ f.user.email if f.user else "N/A"
+            }})<br>
+            <small class="text-muted">{{ f.created_at.strftime('%Y-%m-%d %H:%M:%S UTC') }}</small>
+            <p class="mt-2 mb-0">{{ f.feedback }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="text-muted">No feedback submitted yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

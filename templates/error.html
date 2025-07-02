@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ code }} - {{ message }}{% endblock %}
+
+{% block head %}
+<style>
+    .error-container {
+        padding: 80px 15px;
+    }
+    .error-code {
+        font-size: 96px;
+        font-weight: 700;
+        color: #dc3545;
+    }
+    .error-message {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="text-center error-container">
+    <div class="error-code">{{ code }}</div>
+    <div class="error-message">{{ message }}</div>
+    <p class="text-muted">The page you're looking for doesn't exist or has been moved.</p>
+
+    {% if error %}
+    <div class="alert alert-warning mt-3">
+        {{ error }}
+    </div>
+    {% endif %}
+
+    <a href="{{ url_for('routes.index') }}" class="btn btn-primary mt-4">← Back to Home</a>
+</div>
+{% endblock %}

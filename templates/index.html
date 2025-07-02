@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - FeedbackApp{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-5">Welcome to FeedbackApp</h1>
+    <p class="lead">We value your feedback. Click below to tell us what you think.</p>
+    <a href="{{ url_for('auth.feedback') }}" class="btn btn-lg btn-primary">Give Feedback</a>
+</div>
+{% endblock %}
