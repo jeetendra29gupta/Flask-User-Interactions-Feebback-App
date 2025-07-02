@@ -15,6 +15,7 @@
 * [Logging](#logging)
 * [Deployment Notes](#deployment-notes)
 * [Project Structure](#project-structure)
+* [Screenshots](#screenshots)
 
 ---
 
